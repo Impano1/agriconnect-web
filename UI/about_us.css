@@ -1,0 +1,105 @@
+:root {
+    --bg-color: #ffffff;
+    --second-bg-color: #063736;
+    --text-color: #ededed;
+    --main-color: #0b6e4f;
+    --accent-color: #08a045;
+    --highlight-color: #6bbf59;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.mission, .problem, .solution, .development-model, .hypothesis {
+    opacity: 0;
+    animation-name: fadeIn;
+}
+
+/* Responsive CSS using media queries */
+
+/* For small screens (phones) */
+@media only screen and (max-width: 600px) {
+    header {
+        font-size: 1rem;
+    }
+}
+
+/* For medium screens (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    header {
+        font-size: 1.1rem;
+    }
+    main {
+        padding: 10px;
+    }
+    section {
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+/* For large screens (desktops) */
+@media only screen and (min-width: 1025px) {
+    header {
+        font-size: 1.3rem;
+    }
+    main {
+        padding: 30px;
+    }
+    section {
+        margin-bottom: 50px;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}

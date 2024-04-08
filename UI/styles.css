@@ -1,0 +1,655 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --second-bg-color: #063736;
+    --text-color: #ededed;
+    --main-color: #0b6e4f;
+    --accent-color: #08a045;
+    --highlight-color: #6bbf59;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* header {
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+} */
+
+/* nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+} */
+
+.authentication a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1px 1%;
+    background: var(--accent-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+}
+
+.header.sticky {
+    background: var(--bg-color);
+}
+
+.logo {
+    font-size: 20px;
+    color: var(--text-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+#main-banner {
+    background-image: url('images/agriculture-7.jpg');
+    background-size: 37%;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    text-align: center;
+    
+}
+
+#main-banner .btn {
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+    padding: 12px 20px;
+    background-color: transparent;
+    color: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: -5px;
+}
+
+#main-banner .btn:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+
+#features {
+    padding: 50px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+.feature {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.quick-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.social-media-icons {
+    margin-top: 10px;
+}
+
+@keyframes homeBgText {
+    0%,
+    10%,
+    100% {
+        background-position: -33rem 0;
+    }
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes homeCursorText {
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+    65%,
+    78%,
+    85% {
+        width: 100%;
+        opacity: 1;
+    }
+    75%,
+    81% {
+        opacity: 0;
+    }
+}
+
+@keyframes aboutspinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+#market-trends {
+    padding: 50px;
+    background-color: var(--main-color);
+    text-align: center;
+    color: var(--text-color);
+}
+
+.chart-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.chart {
+    width: 45%;
+    height: 300px;
+    background-color: rgb(1, 29, 37);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.chart {
+    animation: fadeInUp 2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#contact {
+    background-color: var(--accent-color);
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.contact {
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field {
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+    color: var(--text-color);
+}
+
+.contact form .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .5s;
+}
+
+.contact form .input-box .input-field input:focus~.focus,
+.contact form .input-box .input-field input:valid~.focus,
+.contact form .textarea-field textarea:focus~.focus,
+.contact form .textarea-field textarea:valid~.focus {
+    width: 100%;
+}
+
+
+.contact form .textarea-field {
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+
+.contact form .textarea-field textarea {
+    resize: none;
+}
+
+.contact form .btn-box.btns .btn {
+    cursor: pointer;
+}
+
+.field .error-txt {
+    font-size: 14.5px;
+    color: rgb(205, 4, 4);
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+
+.field.error .error-txt {
+    display: block;
+}
+
+.field.error .item {
+    border-color: rgb(205, 4, 4);
+}
+
+
+#feature1 {
+    margin-bottom: 40px;
+}
+
+#feature1 h2 {
+    font-size: 2rem; 
+    margin-bottom: 10px;
+}
+
+#feature1 p {
+    font-size: 1.6rem; 
+    line-height: 1.5; 
+}
+
+.sensores-btn {
+    padding: 12px 24px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 90%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sensores-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sensores-btn {
+    animation: pulseAnimation 5s infinite alternate;
+}
+
+.container-weather {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    background-color: var(--second-bg-color);
+    padding: 20px;
+    color: var(--text-color);
+}
+
+.title-weather {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--accent-color);
+    border-radius: 100px;
+}
+
+.title-current {
+    margin-bottom: 20px;
+    color: var(--text-color);
+    border-radius: 10px;
+    background-color: var(--accent-color);
+}
+
+/* Default styles */
+
+.historical-weather {
+    margin-top: 50px;
+}
+
+.historical-weather h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: var(--text-color);
+}
+
+#historical-weather-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#historical-weather-form label {
+    margin-right: 10px;
+}
+
+#historical-weather-form input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#historical-weather-form button[type="submit"] {
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#historical-weather-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#historical-weather-details {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.historical-weather {
+    animation: slide-up 1s ease-in-out;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media queries for responsiveness */
+
+/* Adjust styles for tablets */
+@media screen and (max-width: 768px) {
+    .historical-weather h2 {
+        font-size: 24px; /* Decrease font size for smaller screens */
+    }
+}
+
+/* Adjust styles for mobile devices */
+@media screen and (max-width: 480px) {
+    .historical-weather h2 {
+        font-size: 20px; /* Further decrease font size for smaller screens */
+    }
+
+    #historical-weather-form {
+        flex-direction: column; /* Arrange form items vertically */
+    }
+
+    #historical-weather-form label {
+        margin-bottom: 10px; /* Adjust margin for smaller screens */
+    }
+
+    #historical-weather-form input[type="date"] {
+        width: 100%; /* Make input field full width */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Adjust margin for smaller screens */
+    }
+
+    #historical-weather-form button[type="submit"] {
+        width: 100%; /* Make button full width */
+    }
+}
+
+  
+
+.farming-sec {
+    padding: 50px 0;
+    text-align: center;
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+.farming-sec > div {
+    margin: 40px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--accent-color);
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+.farming-sec > div:nth-child(odd) {
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+}
+
+.farming-sec > div:nth-child(even) {
+    animation-duration: 1s;
+    animation-delay: 0.4s;
+}
+
+.farming-sec h2 {
+    font-size: 24px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.farming-sec p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.feature-section {
+    background-size: 10%;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.highlight {
+    color: #ffa500;
+}
+
+.subscription-form {
+    margin-top: 20px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="email"] {
+    width: 250px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(126, 2, 128);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+/* Default styles */
+
+/* Add media query for tablets */
+@media screen and (max-width: 768px) {
+    .navbar a {
+        margin-left: 2rem; /* Adjust spacing for smaller screens */
+    }
+}
+
+/* Add media query for mobile devices */
+@media screen and (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Arrange navbar links vertically */
+        align-items: center;
+    }
+    
+    .navbar a {
+        margin: 1rem 0; /* Adjust spacing for smaller screens */
+    }
+    
+    #menu-icon {
+        display: block; /* Show menu icon for smaller screens */
+    }
+    
+    .header {
+        padding: 1rem 2%; /* Adjust header padding for smaller screens */
+    }
+    
+    .header.sticky {
+        padding: 1rem 2%; /* Adjust sticky header padding for smaller screens */
+    }
+    
+    .logo {
+        font-size: 18px; /* Adjust logo size for smaller screens */
+    }
+    
+    .feature {
+        width: 100%; /* Make feature sections full width on smaller screens */
+    }
+    
+    #main-banner {
+        background-size: 70%; /* Adjust background size for smaller screens */
+    }
+}

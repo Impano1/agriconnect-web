@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --second-bg-color: #063736;
+    --text-color: #ededed;
+    --main-color: #0b6e4f;
+    --accent-color: #08a045;
+    --highlight-color: #6bbf59;
+}
+
+header {
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid var(--highlight-color);
+    border-radius: 5px;
+}
+
+.input-field {
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color:var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+}
+
+.signup-link,
+.login-link {
+    text-align: center;
+}
+
+.signup-link a,
+.login-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.signup-link a:hover,
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+input[type="email"]::before,
+input[type="password"]::before,
+input[type="text"]::before,
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--accent-color);
+    z-index: -1;
+    transition: width 0.5s;
+}
+
+input[type="email"]:hover::before,
+input[type="password"]:hover::before,
+input[type="text"]:hover::before,
+button:hover::before {
+    width: 100%;
+}

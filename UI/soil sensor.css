@@ -1,0 +1,99 @@
+:root {
+    --bg-color: #ffffff;
+    --second-bg-color: #063736;
+    --text-color: #ededed;
+    --main-color: #0b6e4f;
+    --accent-color: #08a045;
+    --highlight-color: #6bbf59;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: var(--text-color);
+}
+
+nav {
+    background-color: var(--main-color);
+    padding: 20px 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: var(--highlight-color);
+}
+
+
+.soilpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  #sensors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .sensor-card {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    max-width: 300px;
+  }
+  
+  .sensor-card img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .sensor-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sensor-card {
+    animation: slide-up 2s ease-in-out;
+  }
+  
+  @keyframes slide-up {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
