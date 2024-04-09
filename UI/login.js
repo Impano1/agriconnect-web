@@ -1,12 +1,36 @@
-// Get reference to the login form and login button
-const loginForm = document.getElementById('loginForm');
-const loginBtn = document.getElementById('loginBtn');
+ const loginForm = document.getElementById('loginForm');
 
-// Add click event listener to the login button
-loginBtn.addEventListener('click', function(event) {
-    // Prevent the default form submission behavior
+ loginForm.addEventListener('submit', function(event) {
+     event.preventDefault();
+
+     const email = document.getElementById('loginEmail').value;
+     const password = document.getElementById('loginPassword').value;
+
+     if (email === 'lechretien200@gmail.com' && password === '12345') {
+         localStorage.setItem('userRole', 'admin');
+         window.location.href = 'dashboard.html';
+     } else {
+        alert('Invalid email or password.');
+    }
+ });
+
+
+loginForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Redirect to dashboard.html
-    window.location.href = 'dashboard.html';
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+    const savedEmail = localStorage.getItem('userEmail');
+    const savedRole = localStorage.getItem('userRole');
+
+    if (email === savedEmail && password === '12345') {
+        if (savedRole === 'admin') {
+            window.location.href = 'dashboard.html';
+        } else {
+            window.location.href = 'soilsensor.html';
+        }
+    } else {
+        alert('Invalid email or password.');
+    }
 });
+
